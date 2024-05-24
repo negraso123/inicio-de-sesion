@@ -1,0 +1,180 @@
+//LISTA DE OPCIONES PRINCIPAL
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>PetPal Interactive</title>
+	<STYLE>
+	    @import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap');
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: 'Montserrat Alternates', sans-serif;
+	}
+	body{
+		background: url(https://cloudfront-eu-central-1.images.arcpublishing.com/prisaradio/FWDPW5C6VBPXFBFC22NX4PGHHY.jpg);
+		background-size: 100vw 100vh;
+		background-repeat: no-repeat;
+	}
+	
+	.capa{
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: rgba(0,0,0,0.6);
+		z-index: -1;
+		top: 0;left: 0;
+	}
+	.logotipo{
+		position: fixed;
+		width: 10px;
+		height: 10px;
+		margin-left: -40px;
+		margin-top: 4px;
+	}
+	.header{
+		width: 100%;
+		height: 100px;
+		position: fixed;
+		top: 0;left: 0;
+	}
+	.container{
+		width: 90%;
+		max-width: 1200px;
+		margin: auto;
+	}
+	.container .btn-menu{
+		float: left;
+		line-height:100px;
+		margin-left: 70px;
+	}
+	.logo{
+		float: left;
+		line-height:100px;
+		margin-left: 10px;
+	}
+	.container .btn-menu label{
+		color: #fff;
+		font-size: 25px;
+		cursor: pointer;
+	}
+	.logo h1{
+		position: fixed;
+		color: #fff;
+		font-weight: 400;
+		font-size: 22px;
+		margin-left: 0px;
+	}
+	.container .menu{
+		float: right;
+		line-height: 100px;
+	}
+	.container .menu a{
+		display: inline-block;
+		padding: 15px;
+		line-height: normal;
+		text-decoration: none;
+		color: #fff;
+		transition: all 0.3s ease;
+		border-bottom: 2px solid transparent;
+		font-size: 15px;
+		margin-right: 5px;
+	}
+	.container .menu a:hover{
+		border-bottom: 2px solid #c7c7c7;
+		padding-bottom: 5px;
+	}
+	
+	
+	#btn-menu{
+		display: none;
+	}
+	.container-menu{
+		position: absolute;
+		background: rgba(0,0,0,0.5);
+		width: 100%;
+		height: 100vh;
+		top: 0;left: 0;
+		transition: all 500ms ease;
+		opacity: 0;
+		visibility: hidden;
+	}
+	#btn-menu:checked ~ .container-menu{
+		opacity: 1;
+		visibility: visible;
+	}
+	.cont-menu{
+		width: 100%;
+		max-width: 250px;
+		background: #1c1c1c;
+		height: 100vh;
+		position: relative;
+		transition: all 500ms ease;
+		transform: translateX(-100%);
+	}
+	#btn-menu:checked ~ .container-menu .cont-menu{
+		transform: translateX(0%);
+	}
+	.cont-menu nav{
+		transform: translateY(15%);
+	}
+	.cont-menu nav a{
+		display: block;
+		text-decoration: none;
+		padding: 20px;
+		color: #c7c7c7;
+		border-left: 5px solid transparent;
+		transition: all 400ms ease;
+	}
+	.cont-menu nav a:hover{
+		border-left: 5px solid #c7c7c7;
+		background: #1f1f1f;
+	}
+	.cont-menu label{
+		position: absolute;
+		right: 5px;
+		top: 10px;
+		color: #fff;
+		cursor: pointer;
+		font-size: 18px;
+	}
+	</STYLE>
+</head>
+<body>
+	<header class="header">
+		<div class="container">
+		<div class="btn-menu">
+			<label for="btn-menu">☰</label>
+		</div>
+		<div class="logotipo">
+			<img src="https://cdn.discordapp.com/attachments/1063847894286880869/1243532267041722379/loguito_prueba.png?ex=6651d12c&is=66507fac&hm=fdb6fc846a00debdfde5358e53c832f68181c81d37d52e5b111904beddea66f1&" width="100" height="80">	
+		</div>
+			<div class="logo">
+				<h1>PetPal Interactive</h1>
+			</div>
+			<nav class="menu">
+				<a href="#">Inicio</a>
+				<a href="#">Ayuda</a> 
+				<a href="#">Preguntas Frecuente</a>
+			
+			</nav>
+		</div>
+	</header>
+	<div class="capa"></div>
+<!--	--------------->
+<input type="checkbox" id="btn-menu">
+<div class="container-menu">
+	<div class="cont-menu">
+		<nav>
+			<a href="#">Seleccionar mascota</a>
+			<a href="Mensajito.html">Grabar mensaje</a>
+			<a href="#">Dispensar comida y/o agua</a>
+			<a href="#">Cerrar sesión</a>
+			<a href="#">Apgar sistema</a>
+		</nav>
+		<label for="btn-menu">✖️</label>
+	</div>
+</div>
+</body>
+</html>
