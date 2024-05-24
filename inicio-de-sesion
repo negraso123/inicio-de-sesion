@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Registro</title>
+  <style>
+      * {
+          margin: 0;
+          padding: 10;
+          box-sizing: border-box;
+      }
+
+      body {
+          background-image: url('https://www.hundeo.com/wp-content/uploads/2019/01/Barsoi-1.jpg');
+          min-height: 100vh;
+      }
+
+      .form-register {
+          width: 400px;
+          background: #24303c;
+          padding: 30px;
+          margin: auto;
+          margin-top: 100px;
+          border-radius: 4px;
+          font-family: 'calibri';
+          color: white;
+          box-shadow: 7px 13px 37px #000;
+      }
+
+      .form-register h4 {
+          font-size: 22px;
+          text-align: center;
+          margin-bottom: 22px;
+      }
+
+      .controls {
+          width: 100%;
+          background: #24303c;
+          padding: 10px;
+          border-radius: 4px;
+          margin-bottom: 16px;
+          border: 1px solid #1f53c5;
+          font-family: 'calibri';
+          font-size: 18px;
+          color: white;
+      }
+
+      .form-register p {
+          height: 40px;
+          text-align: center;
+          font-size: 18px;
+          line-height: 40px;
+      }
+
+      .form-register a {
+          color: white;
+          text-decoration: none;
+      }
+
+      .form-register a:hover {
+          color: white;
+          text-decoration: underline;
+      }
+
+      .boton-login {
+          width: 100%;
+          background: #1f53c5;
+          border: none;
+          padding: 12px;
+          color: white;
+          margin: 16px 0;
+          font-size: 16px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          position: relative;
+          overflow: hidden;
+          border-radius: 25px
+      }
+
+      .boton-login::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 300%;
+          height: 300%;
+          background: rgba(255, 255, 255, 0.5);
+          transition: all 0.5s ease;
+          border-radius: 15px
+          transform: translate(-50%, -50%) scale(0);
+      }
+
+      .boton-login:hover {
+          box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .boton-login:active::before {
+          transform: translate(-50%, -50%) scale(1);
+          transition: 0s;
+      }
+
+      .boton-login:active {
+          background-color: #0056b3;
+      }
+  </style>
+</head>
+<body>
+  <section class="form-register">
+    <h4>Iniciar Sesión</h4>
+    <input class="controls" type="email" name="correo" id="correo" placeholder="Correo Electrónico">
+    <input class="controls" type="password" name="contraseña" id="contraseña" placeholder="Contraseña">
+    <input class="boton-login" type="submit" value="Iniciar Sesión">
+    <p><a href="#">¿No Tienes Cuenta?</a></p>
+  </section>
+</body>
+</html>
